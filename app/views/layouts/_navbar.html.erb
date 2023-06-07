@@ -1,0 +1,40 @@
+<aside id="default-sidebar" class="rounded-lg fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 rounded-lg">
+      <ul class="space-y-2 font-medium">
+         <li>
+            <a href="/" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+               <%= image_tag("Logo.svg", size: "200x200") %>
+            </a>
+         </li>
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+               <span class="flex-1 ml-2 whitespace-nowrap">校系適切度分析</span>
+            </a>
+         </li>
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+               <span class="flex-1 ml-2 whitespace-nowrap">關於我們</span>
+            </a>
+         </li>
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+               <span class="flex-1 ml-2 whitespace-nowrap">外站連結</span>
+            </a>
+         </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= button_to '登出SignOut', destroy_user_session_path, method: :delete, class: "flex items-center p-2  ml-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to '登入SignIn', new_user_session_path, class: "flex items-center p-2  ml-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" %>
+          </li>
+        <% end %>
+
+        <li>
+          <button id="play-button" class= "flex items-center p-2  ml-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Music!  </button>
+        </li>
+      </ul>
+   </div>
+</aside>
+

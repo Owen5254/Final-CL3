@@ -1,0 +1,61 @@
+<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+  <%= form_with(model: @score, url: create_score_path, :html => {:class => 'space-y-6'}, method: :post) do |form| %>
+
+    <h5 class="text-xl font-medium text-gray-900 dark:text-white">輸入你的分科測驗成績：</h5>
+
+    <div>
+      <%= form.label :國文成績, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.number_field :chinese, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"%>
+    </div>
+
+    <div>
+      <%= form.label :英文成績, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.number_field :english, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+    </div>
+
+    <div>
+      <%= form.label :數學A成績, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.number_field :mathA, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+    </div>
+
+    <div>
+      <%= form.label :數學B成績, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.number_field :mathB, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+    </div>
+
+    <div>
+      <%= form.label :化學成績, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.number_field :science, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+    </div>
+
+
+    <div>
+      <%= form.label :物理成績, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.number_field :physics, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+    </div>
+
+    <div>
+      <%= form.label :歷史成績, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.number_field :history, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+    </div>
+
+    <div>
+      <%= form.label :地理成績, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.number_field :geography, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+    </div>
+
+    <div>
+      <%= form.label :公民成績, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.number_field :civics, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+    </div>
+
+    <div>
+      <%= form.label :生物成績, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+      <%= form.number_field :biology, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" %>
+    </div>
+    <div>
+      <%= form.submit "下一步", class:"w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
+    </div>
+  <% end %>
+
+</div>

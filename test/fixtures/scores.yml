@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chinese: 1
+  english: 1
+  mathA: 1
+
+two:
+  chinese: 1
+  english: 1
+  mathA: 1

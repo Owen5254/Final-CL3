@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cl3</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <style>
+      .background-image {
+        background-image: url('<%= asset_path("book.jpg") %>');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+
+    <!--%= stylesheet_link_tag 'application' %-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.turbo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+    <!--%= javascript_importmap_tags %-->
+
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+      } else {
+          document.documentElement.classList.remove('dark')
+      }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var audioPlayer = document.getElementById('audio-player');
+        var playButton = document.getElementById('play-button');
+
+        playButton.addEventListener('click', function() {
+          audioPlayer.play();
+        });
+      });
+    </script>
+
+  </head>
+
+  <body class="background-image">
+    <%= audio_tag 'song.wav', controls: false, id: 'audio-player' %>
+    <div class="flex">
+      <%= render partial: 'layouts/navbar' %>
+      <main class="container mx-auto mt-28 px-5 flex justify-center", style="margin-left: 0px;" >
+        <%= yield %>
+      </main>
+    </div>
+  </body>
+</html>
